@@ -1,0 +1,20 @@
+footer, .foot-social{
+  background-color: #111;
+  width: 100%;
+  text-align: center;
+}
+.foot-social{
+  position: sticky;
+  bottom: 0;
+  left: 0;
+}
+p, a{
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.5;
+  text-decoration: none;
+  margin: auto;
+}
+.icon{
+  padding: 5px 5px 0;
+}

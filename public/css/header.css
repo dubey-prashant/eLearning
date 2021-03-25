@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #333;
+  font-family: 'Gill Sans', Calibri, sans-serif;
+}
+header{
+  background-color: #000;
+  color: #eee;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.title{
+  margin: 3% 5%;
+  font-family:  Calibri, sans-serif;
+  display: inline-block;
+  font-size: 30px;
+  line-height: 36px;
+}
+.ham-icon{
+  position: absolute;
+  top: 3px;
+  right: 5%;
+  font-size: 30px;
+}
+.menu{
+  background-color: #111;
+  height: 0;
+  overflow: hidden;
+}
+.open{
+  height: 100%;
+}
+ul{
+  list-style: none;
+  margin: 0 5%;
+  font-weight: 600;
+}

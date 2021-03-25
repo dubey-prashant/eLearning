@@ -1,0 +1,15 @@
+<%- include("partials/header") -%>
+
+<link rel="stylesheet" href="css/webDev.css">
+<main>
+
+<% htmlHindi.forEach(video => { %>
+  <div class="video-name">
+    <a href="web-dev-course/<%= video.id%> "> <%= video.name %> </a>
+  </div>
+
+<% }) %>
+
+
+</main>
+<%- include("partials/footer") -%>

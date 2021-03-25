@@ -1,0 +1,35 @@
+main{
+  padding: 2% 5% ;
+  color: #fff;
+}
+.welcome{
+  font-size: 28px;
+  margin: 3% 0;
+}
+#courses{
+  background-color: #eee;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  margin: 5% 0;
+  padding: 5% 2%;
+  box-shadow: 3px 3px 5px 4px #000;
+}
+.course{
+  background-color: #eee;
+  padding: 5% 2%;
+  margin: 0 0 3%;
+  box-shadow: 3px 3px 5px 4px #000;
+}
+.course-img{
+  width: 100%;
+}
+.course-img img{
+  width: 100%;
+} 
+.c-title{
+  color: #000;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: underline;
+}
