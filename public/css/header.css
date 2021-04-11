@@ -1,12 +1,12 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-body{
+body {
   background-color: #333;
-  font-family: 'Gill Sans', Calibri, sans-serif;
+  font-family: "Gill Sans", Calibri, sans-serif;
 }
-header{
+header {
   background-color: #000;
   color: #eee;
   position: sticky;
@@ -14,29 +14,68 @@ header{
   left: 0;
   width: 100%;
 }
-.title{
-  margin: 3% 5%;
-  font-family:  Calibri, sans-serif;
+.title {
+  font-family: Calibri, sans-serif;
   display: inline-block;
   font-size: 30px;
-  line-height: 36px;
+  line-height: 40px;
+  color: #fff;
 }
-.ham-icon{
-  position: absolute;
-  top: 3px;
-  right: 5%;
-  font-size: 30px;
+.title:hover {
+    color: #eee;
+    text-decoration: underline;
+  }
+
+/* For mobile and devices below 900px */
+@media screen and (max-width: 900px) {
+  header.lg {
+    display: none;
+  }
+  .title {
+    margin: 3% 5%;
+  }
+  .ham-icon {
+    position: absolute;
+    top: 3px;
+    right: 5%;
+    font-size: 30px;
+  }
+  .menu {
+    background-color: #111;
+    height: 0;
+    overflow: hidden;
+  }
+  .open {
+    height: 100%;
+  }
+  ul {
+    list-style: none;
+    margin: 0 5%;
+    font-weight: 600;
+  }
 }
-.menu{
-  background-color: #111;
-  height: 0;
-  overflow: hidden;
-}
-.open{
-  height: 100%;
-}
-ul{
-  list-style: none;
-  margin: 0 5%;
-  font-weight: 600;
+/*  For devices above 900px */
+@media screen and (min-width: 900px) {
+  header.sm {
+    display: none;
+  }
+  header {
+    width: auto;
+    padding: 15px 15%;
+  }
+  .nav {
+    float: right;
+  }
+  .nav a {
+    float: left;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 0 3px;
+    margin: 0 10px;
+  }
+  .nav a:hover {
+    border-bottom: 3px solid #fff;
+    color: #fff;
+  }
 }

@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const app = express();
 // dataBase
 const courses = require("./data/course-list.js");
-const webDevCourse = require("./data/web-dev.js");
+const webDevCourse = require("./data/web-dev-hin.js");
 
 app.set("view engine", 'ejs');
 app.use(express.static("public"));

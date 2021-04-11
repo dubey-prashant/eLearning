@@ -9,7 +9,7 @@ footer, .foot-social{
   left: 0;
 }
 p, a{
-  color: #fff;
+  color: #ddd;
   font-size: 18px;
   line-height: 1.5;
   text-decoration: none;
@@ -17,4 +17,34 @@ p, a{
 }
 .icon{
   padding: 5px 5px 0;
+}
+@media screen and (min-width: 900px){
+  .foot-social, footer{
+    position: sticky;
+    bottom: 0;
+    width: 50%;
+    height: 50px;
+  }
+  .foot-social{
+    left: 0;
+  }
+  footer{
+    left: 50%;
+  }
+  p, a{
+    font-size: 22px;
+    line-height: 2;
+  }
+  .icon{
+    padding: 15px;
+  }
+  .icon:hover{
+    padding: 12px;
+    font-size: 25px;
+    color: #fff;
+  }
+  footer a:hover{
+    color: #fff;
+    text-decoration: underline;
+  }
 }
