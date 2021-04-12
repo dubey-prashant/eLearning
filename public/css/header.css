@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+*::selection{
+  background-color: #0f0;
+  color: #00f;
+}
 body {
   background-color: #333;
   font-family: "Gill Sans", Calibri, sans-serif;
@@ -36,7 +40,8 @@ header {
   }
   .ham-icon {
     position: absolute;
-    top: 3px;
+    top: 50px;
+    transform: translateY(-100%);
     right: 5%;
     font-size: 30px;
   }
@@ -47,11 +52,17 @@ header {
   }
   .open {
     height: 100%;
+    padding: 2%;
   }
   ul {
     list-style: none;
     margin: 0 5%;
     font-weight: 600;
+  }
+  ul li a{
+    color: #eee;
+    text-decoration: none;
+    margin: 2% 0;
   }
 }
 /*  For devices above 900px */
@@ -63,14 +74,20 @@ header {
     width: auto;
     padding: 15px 15%;
   }
+  .title{
+    font-size: 40px;
+  }
   .nav {
     float: right;
   }
   .nav a {
+    color: #ddd;
     float: left;
-    font-size: 20px;
+    line-height: 1.5;
+    font-size: 25px;
     font-weight: 800;
     letter-spacing: 1px;
+    text-decoration: none;
     padding: 0 3px;
     margin: 0 10px;
   }

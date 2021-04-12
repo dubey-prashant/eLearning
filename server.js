@@ -4,21 +4,20 @@ const bodyParser = require("body-parser");
 const app = express();
 // dataBase
 const courses = require("./data/course-list.js");
-const webDevCourse = require("./data/web-dev-hin.js");
+const webDevHin = require("./data/web-dev-hin.js");
 
 app.set("view engine", 'ejs');
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get("/", (req, res)=>{
-  res.render("index", {courses: courses.courses});
-});
+app.get("/", (req, res)=> res.render("index", {courses: courses.courses}));
+ 
 app.get("/web-dev-course", (req, res) =>{
-  res.render("webDev", {htmlHindi: webDevCourse.htmlHindi});
+  res.render("webDev", {htmlHindi: webDevHin.htmlHindi});
 });
+
 app.get("/web-dev-course/:id", (req, res) => {
-  res.render("video", {video: webDevCourse.htmlHindi[req.params.id-1]});
+  res.render("video", {video: webDevHin.htmlHindi[req.params.id-1]});
 });
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Working Boss!");
-});
+
+app.listen(process.env.PORT || 3000, () => console.log("Working Boss!"));

@@ -3,8 +3,11 @@
 <link rel="stylesheet" href="css/webDev.css">
 <main>
 
+  <h1 class="course-name">Web Development</h1>
+  <hr>
+
 <% htmlHindi.forEach(video => { %>
-  <div class="video-name">
+  <div class="video-name  <%= video.style %> ">
     <a href="web-dev-course/<%= video.id%> "> <%= video.name %> </a>
   </div>
 

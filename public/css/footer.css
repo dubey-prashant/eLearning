@@ -1,50 +1,85 @@
-footer, .foot-social{
-  background-color: #111;
-  width: 100%;
-  text-align: center;
-}
-.foot-social{
+footer {
   position: sticky;
+  width: 100%;
   bottom: 0;
   left: 0;
+  background-color: #000;
 }
-p, a{
+
+.foot-container {
+  text-align: left;
+  padding: 1% 15%;
+}
+
+.foot-social {
+  display: inline;
+  float: right;
+}
+
+.icon {
   color: #ddd;
-  font-size: 18px;
-  line-height: 1.5;
+  text-align: center;
+  line-height: 30px;
+  font-size: 25px;
+  padding: 0 15px;
+}
+
+.icon:hover {
+  color: #fff;
+  font-size: 30px;
+}
+
+.foot-link,
+.foot-text p {
+  line-height: 30px;
+  font-size: 25px;
+  color: #ddd;
   text-decoration: none;
-  margin: auto;
 }
-.icon{
-  padding: 5px 5px 0;
+
+.foot-link {
+  font-weight: 700;
+  color: #eee;
 }
-@media screen and (min-width: 900px){
-  .foot-social, footer{
-    position: sticky;
-    bottom: 0;
-    width: 50%;
-    height: 50px;
+
+.foot-link:hover {
+  text-decoration: underline;
+}
+/* For devices below 1100px */
+@media screen and (max-width: 1100px) {
+  .foot-container {
+    text-align: center;
+    padding: 1%;
   }
-  .foot-social{
-    left: 0;
+
+  .foot-link,
+  .foot-text p {
+    font-size: 20px;
   }
-  footer{
-    left: 50%;
+
+  .foot-social {
+    float: none;
+    display: block;
+    padding: 0 5px 3px;
   }
-  p, a{
-    font-size: 22px;
-    line-height: 2;
+
+  .icon {
+    padding: 0 10px;
+    font-size: 20px;
   }
-  .icon{
-    padding: 15px;
+}
+/* For devices below 600px */
+@media screen and (max-width: 600px) {
+  .icon {
+    padding: 0 5px;
+    font-size: 20px;
   }
-  .icon:hover{
-    padding: 12px;
-    font-size: 25px;
-    color: #fff;
+  .icon:hover {
+    font-size: 24px;
   }
-  footer a:hover{
-    color: #fff;
-    text-decoration: underline;
+  .foot-link,
+  .foot-text p {
+    line-height: 24px;
+    font-size: 18px;
   }
 }

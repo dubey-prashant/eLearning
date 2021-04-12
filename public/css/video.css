@@ -1,10 +1,13 @@
 main{
   padding: 3%;
+  height: 600px;
+  text-align: center;
 }
 .vid-title{
+  font-size: 30px;
   background-color: #fff;
-  padding: 2% 5%;
   box-shadow: 3px 3px 4px 4px #000;
+  padding: 2% 5%;
   margin: 5% auto;
   text-align: center;
 }
@@ -12,23 +15,59 @@ main{
   width: 100%;
 }
 .vid-container{
-  background-color: #ddd;
+  background-color: transparent;
   box-shadow: 3px 3px 4px 4px #000;
   padding: 10% 2%;
-  height: 250px;
-  position: relative;
 }
 .prev, .next{
-  background-color: #0af;
+  background-color: #333;
   padding: 2% 5%;
   border-radius: 5px;
-  border: 2px solid #ff0;
-  position: absolute;
-  bottom: 5%;
+  border: 2px solid #000;
 }
-.next{
-  right: 5%;
+.prev:hover, .next:hover{
+  border-width: 5px;
 }
 .prev{
-  left: 5%;
+  margin: 20px 50px 0 0 ;
+}
+.next{
+  margin: 20px 0 0 50px;
+}
+@media screen and (min-width: 900px) {
+  main{
+    padding: 0 15%;
+  }
+  .vid-title{
+    font-size: 38px;
+    width: 60%;
+    padding: 2% 5%;
+    margin: 1% auto 3%;
+  }
+  .vid-container{
+    width: 60%;
+    padding: 2%;
+    margin: auto;
+  }
+  .video{
+    display: block;
+  }
+  .prev, .next{
+    background-color: #333;
+    padding: 0 2%;
+    border-radius: 15px;
+    border: 2px solid #000;
+  }
+  .prev a, .next a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: .2px;
+  }
+  .prev{
+    margin: 20px 150px 0 0 ;
+  }
+  .next{
+    margin: 20px 0 0 150px;
+  }
 }

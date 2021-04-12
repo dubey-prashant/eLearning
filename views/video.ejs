@@ -9,7 +9,7 @@
       <video class="video" width="100%" controls data-yt2html5="<%=video.url%>"></video>
       <% if (video.id==1) { %>
         <button class="next"><a href="/web-dev-course/<%= video.id + 1 %>">Next</a></button>
-        <% } else if (video.id == 25 ) { %>
+        <% } else if (video.id==25 ) { %>
           <button class="prev"><a href="/web-dev-course/<%= video.id - 1 %>">Prev</a></button>
           <% } else { %>
             <button class="prev"><a href="/web-dev-course/<%= video.id - 1 %>">Prev</a></button>
