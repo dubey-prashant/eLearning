@@ -1,6 +1,7 @@
 <%- include("./partials/header") -%>
-  <link rel="stylesheet" href="/css/video.css">
-  <main>
+<link rel="stylesheet" href="/css/video.css">
+<main>
+  <div class="wrapper">
     <h1 class="vid-title">
       <%= video.name %>
     </h1>
@@ -8,17 +9,23 @@
     <div class="vid-container">
       <video class="video" width="100%" controls data-yt2html5="<%=video.url%>"></video>
       <% if (video.id==1) { %>
+      <button class="next"><a href="/web-dev-course/<%= video.id + 1 %>">Next</a></button>
+      <% } else if (video.id==35 ) { %>
+      <button class="prev"><a href="/web-dev-course/<%= video.id - 1 %>">Prev</a></button>
+      <% } else { %>
+      <div class="flex-btn-container">
+        <button class="prev"><a href="/web-dev-course/<%= video.id - 1 %>">Prev</a></button>
         <button class="next"><a href="/web-dev-course/<%= video.id + 1 %>">Next</a></button>
-        <% } else if (video.id==35 ) { %>
-          <button class="prev"><a href="/web-dev-course/<%= video.id - 1 %>">Prev</a></button>
-          <% } else { %>
-            <button class="prev"><a href="/web-dev-course/<%= video.id - 1 %>">Prev</a></button>
-            <button class="next"><a href="/web-dev-course/<%= video.id + 1 %>">Next</a></button>
-            <% } %>
+      </div>
+      <% } %>
     </div>
-  </main>
+  </div>
 
-  <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@2.0.0/dist/YouTubeToHtml5.js"></script>
-  <script>new YouTubeToHtml5();</script>
+</main>
 
-  <%- include("./partials/footer") -%>
+<script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@2.0.0/dist/YouTubeToHtml5.js"></script>
+<script>
+  new YouTubeToHtml5();
+</script>
+
+<%- include("./partials/footer") -%>

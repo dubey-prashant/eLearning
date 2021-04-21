@@ -1,52 +1,76 @@
-main {
-  padding: 2% 5%;
-}
-.course-name{
-  font-size: 28px;
+.course-name {
+  color: #fff;
+  font-size: 24px;
   font-weight: 700;
+  padding: 10px;
+}
+
+hr {
   color: #fff;
+  margin: 0 0 15px;
 }
-hr{
-  color: #fff;
-  margin: 2% 0 3%;
+
+.orange {
+  background-image: linear-gradient(315deg, #ec9f05 0%, #ff4e00 74%);
 }
-.orange{
-  background-color: #ff4e00;
-  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+
+.orange:hover {
+  background-image: linear-gradient(#ff4e00 0%, #ec9f05 74%);
 }
-.blue{
-  background-color: #260b88;
+
+.blue {
   background-image: linear-gradient(315deg, #260b88 0%, #9162e9 74%);
 }
+
+.blue:hover {
+  background-image: linear-gradient(#9162e9 0%, #260b88 74%);
+}
+
 .video-name {
   border-radius: 5px;
   box-shadow: 2px 2px 3px 3px #000;
   text-align: center;
   padding: 15px 0;
-  margin: 3% 0;
+  margin: 10px 0;
 }
+
 .video-name a {
   color: #fff;
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
 }
-@media screen and (min-width: 900px) {
-  main {
-    padding: 2% 15%;
+
+@media screen and (min-width: 600px) {
+  .course-name {
+    font-size: 28px;
   }
-  hr{
-    width: 50%;
-  }
-  .course-name{
-    font-size: 34px;
+  .main-container{
+    width: 70%;
   }
   .video-name {
-    width: 50%;
-    margin: 1% 0;
-    padding: 10px 0;
+    padding: 20px 0;
   }
+  
+  .video-name a {
+    font-size: 24px;
+  }
+  
+}
+
+@media screen and (min-width: 1000px) {
+  .course-name {
+    font-size: 32px;
+  }
+  .main-container{
+    width: 60%;
+  }
+  .video-name {
+    padding: 20px 0;
+  }
+  
   .video-name a {
     font-size: 28px;
   }
+
 }

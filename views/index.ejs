@@ -2,23 +2,29 @@
   <link rel="stylesheet" href="css/index.css">
   <!-- Main -->
   <main>
-    <h1 class="welcome">Welcome to dubeyTech</h1>
-    <hr>
-    <h2 id="courses">COURSES</h2>
+    <div class="wrapper">
+      <h1 class="welcome">Welcome to dubeyTech</h1>
+      <hr>
+      <div class="main-container">
+        <h2 id="courses">COURSES</h2>
 
-    <!-- for loop to print list of courses -->
-    <% courses.forEach(course => { %>
-    <div class="course">
-      <div class="course-img">
-        <a href="<%= course.url %> ">
-          <img src="images/<%= course.img %> " alt="<%= course.name %> ">
-        </a>
+        <!-- for loop to print list of courses -->
+        <% courses.forEach(course=> { %>
+          <div class="course">
+            <div class="course-img">
+              <a href="<%= course.url %> ">
+                <img src="images/<%= course.img %> " alt="<%= course.name %> ">
+              </a>
+            </div>
+            <a href="<%= course.url %>">
+              <h2 class="c-title">
+                <%= course.name %>
+              </h2>
+            </a>
+          </div>
+          <% }) %>
       </div>
-      <a href="<%= course.url %>">
-        <h2 class="c-title"><%= course.name %> </h2>
-      </a>
     </div>
-    <% }) %>
-
   </main>
+
   <%- include("partials/footer") -%>

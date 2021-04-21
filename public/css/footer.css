@@ -1,85 +1,54 @@
-footer {
+/* floating social start  */
+.float-social {
+  background: #000;
+  margin: 0;
+  text-align: center;
   position: sticky;
   width: 100%;
   bottom: 0;
   left: 0;
-  background-color: #000;
-}
-
-.foot-container {
-  text-align: left;
-  padding: 1% 15%;
-}
-
-.foot-social {
-  display: inline;
-  float: right;
 }
 
 .icon {
   color: #ddd;
-  text-align: center;
-  line-height: 30px;
-  font-size: 25px;
-  padding: 0 15px;
+  font-size: 20px;
+  padding: 10px 20px;
 }
 
 .icon:hover {
   color: #fff;
-  font-size: 30px;
+  font-size: 25px;
 }
 
-.foot-link,
-.foot-text p {
-  line-height: 30px;
-  font-size: 25px;
-  color: #ddd;
+@media screen and (max-width: 600px) {
+  .icon {
+    font-size: 18px;
+    padding: 8px;
+  }
+}
+
+/* floating social end  */
+
+/* Footer start */
+footer {
+  background: #000;
+  color: #eee;
+  text-align: center;
+  padding: 10px;
+}
+
+footer p {
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+footer a {
+  color: #eee;
   text-decoration: none;
 }
 
-.foot-link {
-  font-weight: 700;
-  color: #eee;
-}
-
-.foot-link:hover {
+footer a:hover {
+  color: #fff;
+  font-size: 22px;
   text-decoration: underline;
-}
-/* For devices below 1100px */
-@media screen and (max-width: 1100px) {
-  .foot-container {
-    text-align: center;
-    padding: 1%;
-  }
-
-  .foot-link,
-  .foot-text p {
-    font-size: 20px;
-  }
-
-  .foot-social {
-    float: none;
-    display: block;
-    padding: 0 5px 3px;
-  }
-
-  .icon {
-    padding: 0 10px;
-    font-size: 20px;
-  }
-}
-/* For devices below 600px */
-@media screen and (max-width: 600px) {
-  .icon {
-    padding: 0 5px;
-    font-size: 20px;
-  }
-  .icon:hover {
-    font-size: 24px;
-  }
-  .foot-link,
-  .foot-text p {
-    line-height: 24px;
-    font-size: 18px;
-  }
 }

@@ -16,30 +16,32 @@
 </head>
 
 <body>
-  <header class="sm">
-    <a href="/">
-      <h1 class="title">dubeyTech</h1>
-    </a>
-    <span class="ham-icon">&#9776;</span>
-    <div class="menu">
-      <ul>
-        <li><a href="/">HOME</a></li>
-        <li><a href="/#courses">COURSES</a></li>
-        <li><a href="https://dubeytech-prashant.github.io/cv">ABOUT US</a></li>
-        <li><a href="mailto:dubeyprashant583@gmail.com">CONTACT US</a></li>
-      </ul>
+
+
+  <header>
+    <div class="wrapper">
+      <nav>
+        <div class="brand">
+          <a href="/" class="brand-name">
+            <h1>dubeyTech</h1>
+          </a>
+          <span class="ham-icon"> &#9776; </span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/#courses">COURSES</a></li>
+          <li><a href="/blog">BLOG</a></li>
+          <li><a href="https://dubeytech1.herokuapp.com/">PROJECTS</a></li>
+          <li><a href="https://dubeytech-prashant.github.io/cv">ABOUT US</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-  <header class="lg">
-    <div class="navbar">
-      <a href="/">
-        <h1 class="title">dubeyTech</h1>
-      </a>
-    <div class="nav">
-      <a href="/">HOME</a>
-      <a href="/#courses">COURSES</a>
-      <a href="https://dubeytech-prashant.github.io/cv">ABOUT</a>
-      <a href="mailto:dubeyprashant583@gmail.com">CONTACT</a>
-    </div>
-    </div>
-  </header>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script>
+    $(".ham-icon").on("click", () => {
+      $(".nav-links").toggleClass("show");
+    });
+  </script>

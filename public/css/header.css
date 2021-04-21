@@ -2,97 +2,161 @@
   margin: 0;
   padding: 0;
 }
-*::selection{
+
+*::selection {
   background-color: #0f0;
   color: #00f;
 }
+
 body {
   background-color: #333;
   font-family: "Gill Sans", Calibri, sans-serif;
 }
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 header {
   background-color: #000;
   color: #eee;
   position: sticky;
   top: 0;
   left: 0;
-  width: 100%;
+  padding: 0 2%;
 }
-.title {
-  font-family: Calibri, sans-serif;
-  display: inline-block;
-  font-size: 30px;
-  line-height: 40px;
+
+nav {
+  margin: 0 auto;
+  letter-spacing: .5px;
+}
+
+nav a {
   color: #fff;
+  text-decoration: none;
 }
-.title:hover {
-    color: #eee;
-    text-decoration: underline;
+
+.brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-name {
+  font-family: Calibri, sans-serif;
+  color: #eee;
+  font-size: 24px;
+  font-weight: 900;
+  background: linear-gradient(#0f0, #0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 4px;
+}
+
+.brand-name:hover {
+  padding-bottom: 0;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.8));
+  color: #fff;
+  border-bottom: 4px solid #fff;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
+
+.ham-icon {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.nav-links {
+  list-style: none;
+  display: none;
+}
+
+.nav-links li {
+  padding: 5px;
+  font-size: 18px;
+}
+
+.nav-links li:hover {
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.9));
+}
+
+.show {
+  display: block;
+}
+
+main {
+  padding: 0 2%;
+}
+
+/* *******************************      devices above 600px      **************** */
+
+@media screen and (min-width: 600px) {
+  header, main{
+    padding: 0 5%;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-/* For mobile and devices below 900px */
-@media screen and (max-width: 900px) {
-  header.lg {
-    display: none;
+  .brand {
+    flex: 1;
   }
-  .title {
-    margin: 3% 5%;
+
+  .brand-name {
+    font-size: 28px;
   }
+
   .ham-icon {
-    position: absolute;
-    top: 50px;
-    transform: translateY(-100%);
-    right: 5%;
-    font-size: 30px;
-  }
-  .menu {
-    background-color: #111;
-    height: 0;
-    overflow: hidden;
-  }
-  .open {
-    height: 100%;
-    padding: 2%;
-  }
-  ul {
-    list-style: none;
-    margin: 0 5%;
-    font-weight: 600;
-  }
-  ul li a{
-    color: #eee;
-    text-decoration: none;
-    margin: 2% 0;
-  }
-}
-/*  For devices above 900px */
-@media screen and (min-width: 900px) {
-  header.sm {
     display: none;
   }
-  header {
-    width: auto;
-    padding: 15px 15%;
+
+  .nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
   }
-  .title{
-    font-size: 40px;
+
+  .nav-links li:hover {
+    padding-top: 0;
+    border-bottom: 4px solid #fff;
   }
-  .nav {
-    float: right;
+
+}
+
+/* *******************************      devices above 1000px      **************** */
+
+@media screen and (min-width: 1000px) {
+  main, header {
+    padding: 0 15%;
   }
-  .nav a {
-    color: #ddd;
-    float: left;
-    line-height: 1.5;
-    font-size: 25px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-decoration: none;
-    padding: 0 3px;
-    margin: 0 10px;
+  .brand-name{
+    font-size: 32px;
   }
-  .nav a:hover {
-    border-bottom: 3px solid #fff;
-    color: #fff;
+
+  .nav-links li {
+    font-size: 21px;
+  }
+
+}
+
+/* *******************************      devices above 1200px      **************** */
+
+@media screen and (min-width: 1200px) {
+  .brand {
+    flex: 1;
+  }
+
+  .nav-links li {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    flex: 1;
   }
 }

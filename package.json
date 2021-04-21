@@ -1,13 +1,12 @@
 {
   "name": "dubeytech",
   "version": "1.0.0",
-  "description": "open and free learning platform by prashant dubey",
+  "description": "Learning platform by dubeyTech",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "codeBot",
+  "author": "dubeyTech-prashant",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",

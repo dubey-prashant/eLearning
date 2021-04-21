@@ -2,17 +2,21 @@
 
 <link rel="stylesheet" href="css/webDev.css">
 <main>
+  <div class="wrapper">
+    <h1 class="course-name">Web Development</h1>
+    <hr>
+    <div class="main-container">
+      <% htmlHindi.forEach(video=> { %>
 
-  <h1 class="course-name">Web Development</h1>
-  <hr>
+      <div class="video-name  <%= video.style %> ">
+        <a href="web-dev-course/<%= video.id%> ">
+          <%= video.name %>
+        </a>
+      </div>
 
-<% htmlHindi.forEach(video => { %>
-  <div class="video-name  <%= video.style %> ">
-    <a href="web-dev-course/<%= video.id%> "> <%= video.name %> </a>
+      <% }) %>
+    </div>
   </div>
-
-<% }) %>
-
 
 </main>
 <%- include("partials/footer") -%>

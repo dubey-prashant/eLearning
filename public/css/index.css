@@ -1,57 +1,64 @@
-main{
-  padding: 2% 5% ;
+.welcome {
   color: #fff;
+  font-size: 24px;
+  margin: 10px 0 0;
 }
-.welcome{
-  font-size: 28px;
-  margin: 3% 0;
+
+hr {
+  margin: 10px 0;
 }
-#courses{
+
+#courses {
   background-color: #eee;
   color: #000;
-  font-weight: 600;
+  font-weight: 900;
   letter-spacing: 0.2rem;
   font-size: 24px;
-  margin: 5% 0;
-  padding: 5% 2%;
+  margin: 10px 0;
+  padding: 10px 5px;
   box-shadow: 3px 3px 5px 4px #000;
 }
-.course{
+
+.course {
   background-color: #eee;
+  padding: 2%;
   margin: 0 0 3%;
   box-shadow: 3px 3px 5px 4px #000;
 }
-.course-img{
+
+.course-img {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.course-img img {
   width: 100%;
 }
-.course-img img{
-  width: 100%;
-} 
-.c-title{
+
+.c-title {
   color: #000;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
   text-decoration: underline;
 }
-@media screen and (min-width: 900px){
-  main{
-    padding: 2% 15%;
+
+@media screen and (min-width: 600px) {
+  .welcome {
+    font-size: 28px;
   }
-  .welcome{
+
+  .main-container {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .welcome {
     font-size: 32px;
-    margin: 1% 0;
   }
-  #courses{
-    width: 50%;
-    font-size: 30px;
-    padding: 2%;
-  }
-  .course{
-    width: 50%;
-    padding: 2%;
-  padding: 2%;
-  }
-  .c-title{
-    font-size: 30px;
+
+  .main-container {
+    width: 40%;
   }
 }
