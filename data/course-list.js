@@ -5,13 +5,13 @@ exports.courses = [
     url: "/web-dev-course"
   },
   {
-    name: "Android Development",
+    name: "C++",
     img: "android-dev.png",
-    url: "/android-dev"
+    url: "/cpp"
   },
   {
-    name: "AI Development",
+    name: "C++",
     img: "ai-dev.png",
-    url: "/ai-dev"
+    url: "/cpp"
   }
 ]

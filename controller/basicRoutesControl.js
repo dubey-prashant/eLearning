@@ -18,3 +18,7 @@ exports.webDevCourse_get = (req, res) => {
 exports.webDevCourseVid_get = (req, res) => {
   res.render("video", { video: webDevHin.htmlHindi[req.params.id - 1] });
 }
+
+exports.cppTuts_get = (req, res) => {
+  res.render("cpp")
+}
