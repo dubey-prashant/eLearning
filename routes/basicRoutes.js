@@ -3,7 +3,7 @@ const routeControl = require('../controller/basicRoutesControl')
 
 const routes = Router()
 
-routes.get("/", routeControl.root);
+routes.get("/", routeControl.root)
 
 routes.get("/blog", routeControl.blog_get)
 

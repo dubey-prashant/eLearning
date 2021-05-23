@@ -1,6 +1,6 @@
 // dataBase
 const courses = require("../data/course-list.js");
-const webDevHin = require("../data/web-dev-hin.js");
+const webDev = require("../data/webDev.js");
 
 
 exports.root = (req, res) => {
@@ -12,11 +12,11 @@ exports.blog_get = (req, res) => {
 }
 
 exports.webDevCourse_get = (req, res) => {
-  res.render("webDev", { htmlHindi: webDevHin.htmlHindi })
+  res.render("webDev", { webDev: webDev.webDev })
 }
 
 exports.webDevCourseVid_get = (req, res) => {
-  res.render("video", { video: webDevHin.htmlHindi[req.params.id - 1] });
+  res.render("video", { video: webDev.webDev[req.params.id - 1] });
 }
 
 exports.cppTuts_get = (req, res) => {

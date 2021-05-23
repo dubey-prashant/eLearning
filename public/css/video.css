@@ -8,44 +8,24 @@
 }
 
 .vid-container {
-  background-color: transparent;
-  box-shadow: 3px 3px 4px 4px #000;
-  padding: 10% 2%;
-  height: 500px;
-  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+  /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
 .video {
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
-  margin: 0 auto;
+  height: 100%;
 }
 
-.flex-btn-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.prev,
-.next {
-  background-color: #333;
-  font-size: 20px;
-  padding: 5px 10px;
-  margin: 5%;
-  border-radius: 5px;
-  border: 2px solid #000;
-}
-
-.prev a,
-.next a {
-  color: #fff;
-  text-decoration: none;
-  letter-spacing: .2px;
-}
-
-.prev:hover,
-.next:hover {
-  border-width: 5px;
-}
 
 @media screen and (min-width: 600px) {
   .vid-title {
@@ -54,15 +34,7 @@
     margin: 2% auto;
   }
 
-  .video {
-    width: 80%;
-  }
 
-  .prev,
-  .next {
-    font-size: 24px;
-    margin: 2%;
-  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -70,13 +42,4 @@
     font-size: 32px;
   }
 
-  .video {
-    width: 60%;
-  }
-
-  .prev,
-  .next {
-    font-size: 24px;
-    margin: 2%;
-  }
 }
