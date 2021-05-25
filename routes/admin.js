@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const PlayList = require('../models/playList')
+const PlayList = require('../models/PlayList')
 
 router.post('/admin/add-pl', (req, res) => {
   const rB = req.body
