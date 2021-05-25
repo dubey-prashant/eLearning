@@ -1,13 +1,22 @@
-const express = require("express");
-const ejs = require("ejs");
-const bodyParser = require("body-parser");
-const basicRoutes = require("./routes/basicRoutes");
+if (process.env.NODE_ENV !== 'production') require('dotenv').config()
+const express = require("express")
+const mongoose = require('mongoose')
+const basicRoutes = require("./routes/basicRoutes")
+const adminRoute = require("./routes/admin")
 const app = express();
+
+// connect mongo-db
+mongoose.connect(process.env.MONGO_DB_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true
+}).then(app.listen(process.env.PORT, () => console.log("Working Boss!")))
+  .catch(err => console.log(err))
+// connection to mongo end
 
 app.set("view engine", 'ejs');
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json())
 
 app.use(basicRoutes)
-
-app.listen(process.env.PORT || 3000, () => console.log("Working Boss!"));
+app.use(adminRoute)

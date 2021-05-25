@@ -7,6 +7,10 @@ routes.get("/", routeControl.root)
 
 routes.get("/blog", routeControl.blog_get)
 
+routes.get("/projects", routeControl.projects_get)
+
+routes.get("/about", routeControl.about_get)
+
 routes.get("/web-dev-course", routeControl.webDevCourse_get)
 
 routes.get("/web-dev-course/:id", routeControl.webDevCourseVid_get)
